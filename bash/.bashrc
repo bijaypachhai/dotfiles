@@ -7,10 +7,22 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+## PROMPT CUSTOMIZATION
 #PS1='[\u@\h \W]\$ '
 
-PS0="\n"    ## this adds newline between command and it's output
-PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\n${PS1_CMD1}@@\w\n%% '
+_GREEN=$(tput setaf 2)
+_BLUE=$(tput setaf 4)
+_RED=$(tput setaf 1)
+_WHITE=$(tput setaf 7)
+_YELLOW=$(tput setaf 3)
+_BOLD=$(tput bold)
+_RESET=$(tput sgr0)
+
+PS0="\n" ## this adds new line between a command and its output
+#PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1="\n\e[1;32m${PS1_CMD1}@@\w\n%% \e[m "
+
+PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1="\n${_RED}${_BOLD}${PS1_CMD1}** ${_WHITE}@@ ${_GREEN}\w\n${_YELLOW}%% ${_RESET}"
 
 ## CUSTOM ALIASES
 alias gadd='git add'

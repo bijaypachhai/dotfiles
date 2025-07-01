@@ -15,3 +15,22 @@ if [[ "$(tty)" == '/dev/tty1' ]]; then
 exec startx
 fi
 ```
+
+
+
+## Issue on window layout
+
+`i3: V[V[S[Navigator]]]` appearing at the window title in tabbed layout
+
+```markdown
+
+### focus on parent container
+$mod + a  
+
+### make the parent container floating
+$mod + shift + space
+
+### move to scratch pad
+$mod + shift + -
+
+```

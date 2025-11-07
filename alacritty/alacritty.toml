@@ -1,0 +1,36 @@
+general.import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.toml",]
+
+[env]
+TERM = "alacritty"
+
+[terminal.shell]
+program = "/usr/bin/tmux"
+args = ["new-session", "-s", "A1"]
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.5
+
+[window.padding]
+x = 20
+y = 20
+
+[font.offset]
+x = 1
+y = 3
+
+[colors.primary]
+background = '0x282a36'
+foreground = '0xffffff'
+
+[colors.normal]
+black = '0x282a2e'
+red = '0xa54242'
+green = '0x8c9440'
+yellow = '0xde935f'
+blue = '0x5f819d'
+magenta = '0x85678f'
+cyan = '0x5e8d87'
+white = '0xffffff'  
+
